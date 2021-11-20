@@ -112,5 +112,5 @@ class Calculadora {
 var calculador = new Calculadora()
 
 document.addEventListener('keydown', (evento) => {
-  calculador.teclado(evento.key)
+  calculador.teclado(evento)
 });
