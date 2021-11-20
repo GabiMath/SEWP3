@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link href="CalculadoraBasica.css" rel="stylesheet" />
+    <script src="CalculadoraBasica.js"></script>
+
+</head>
+<body onkeydown="calculador.teclado(event)">
+    <h1>Calculadora Básica</h1>
+    <main>
+    <form name="calculadora">
+        <p id="display">0
+        </p>
+        <input type="button" value="mrc" onclick="calculador.mrc()">
+        <input type="button" value="m-" onclick="calculador.mMenos()">
+        <input type="button" value="m+" onclick="calculador.mMas()">
+        <input type="button" value="/" onclick="calculador.digito('/')">
+        <input type="button" value="7" onclick="calculador.digito('7')">
+        <input type="button" value="8" onclick="calculador.digito('8')">
+        <input type="button" value="9" onclick="calculador.digito('9')">
+        <input type="button" value="*" onclick="calculador.digito('*')">
+        <input type="button" value="4" onclick="calculador.digito('4')">
+        <input type="button" value="5" onclick="calculador.digito('5')">
+        <input type="button" value="6" onclick="calculador.digito('6')">
+        <input type="button" value="-" onclick="calculador.digito('-')">
+        <input type="button" value="1" onclick="calculador.digito('1')">
+        <input type="button" value="2" onclick="calculador.digito('2')">
+        <input type="button" value="3" onclick="calculador.digito('3')">
+        <input type="button" value="+" onclick="calculador.digito('+')">
+        <input type="button" value="0" onclick="calculador.digito('0')">
+        <input type="button" value="." onclick="calculador.digito('.')">
+        <input type="button" value="C" onclick="calculador.borrarTodo()">
+        <input type="button" value="=" onclick="calculador.igual()">
+    </form>
+    </main>
+</body>
+</html>
