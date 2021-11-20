@@ -1,0 +1,33 @@
+body{
+  background-color: rgb(213, 213, 216);
+}
+
+h1 {
+    color: #fff;
+    background-color: #061433;
+    text-transform: uppercase;
+    padding: 0.3em;
+    text-align: center;
+  }
+
+h2 {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+h3 {
+    padding: 0.1em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+h4 {
+    padding: 0.2em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+p{
+    color: #000000;
+    text-align:center;
+}
