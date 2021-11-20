@@ -57,7 +57,7 @@ p[id="display"]{
 }
 
 input[type="button"]:nth-child(4n+1){
-    background-color: #a02626;
+    background-color: #da3434;
     color: #000;
 }
 
