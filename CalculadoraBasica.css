@@ -61,6 +61,14 @@ input[type="button"]:nth-child(4n+1){
     color: #000;
 }
 
+input[type="submit"]{
+    grid-column: 1 /-1;
+    height: 0;
+    background-color: #262c2b;
+    color: #000;
+    border: none;
+}
+
 input[type="button"]:active {
     background-color: #505353;
     color: #000;
