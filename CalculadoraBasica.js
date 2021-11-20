@@ -68,9 +68,7 @@ class Calculadora {
     igual() {
       var operadores = this.display.split(/[^-+*/()]/);
       var patronNumeros = /\d+\.*\d*/g;
-      console.log(operadores);
       var numeros = this.display.match(patronNumeros);
-      console.log(numeros);
       operadores = operadores.filter((blank) => blank != "");
       var numerosNumber = [];
       numeros.forEach((numero) => numerosNumber.push("Number(" + numero + ")"));
@@ -88,7 +86,6 @@ class Calculadora {
         }
       }
       /**Método operar */
-      console.log(this.resultado);
       this.resultado = eval(this.resultado);
       this.display = this.resultado;
       document.getElementById("display").innerHTML = this.display;
@@ -105,6 +102,7 @@ class Calculadora {
       } else if (evento.key == "Backspace") {
         this.borrarTodo();
       } else if (evento.key == "Enter") {
+        evento.preventDefault();
         this.igual();
       }
     }
