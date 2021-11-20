@@ -1,5 +1,5 @@
 document.write("<span><strong>Nombre del código: </strong>" + infoNavegador.nombreCodigo + "</span>");
-document.write("<span><strong>Versión: ");
+document.write("<span><strong>Versión: </strong>");
 document.write(infoNavegador.version);
 document.write("</span>");
 document.write("<span><strong>Plataforma: </strong>");
