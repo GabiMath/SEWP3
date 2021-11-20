@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link href="CalculadoraCientifica.css" rel="stylesheet" />
+    <script src="CalculadoraCientifica.js"></script>
+</head>
+<body onkeyup="calculador.teclado(event)">
+    <h1>Calculadora Científica</h1>
+    <main>
+    <form name="calculadora">
+        <p id="display">0
+        </p>
+        <input type="button" id="DEG" value="DEG" onclick="calculador.radianes(value)">
+        <input type="button" value="HYP" onclick="calculador.hiperbolicos()">
+        <input type="button" value="F-E" onclick="calculador.notacionCientifica()">
+        <input type="text" value="" disabled>
+        <input type="text" value="" disabled>
+        <input type="button" id="MC" value="MC" onclick="calculador.mrc()" >
+        <input type="button" id="MR" value="MR" onclick="calculador.mr()" >
+        <input type="button" id="M+" value="M+" onclick="calculador.mMas()">
+        <input type="button" id="M-" value="M-" onclick="calculador.mMenos()">
+        <input type="button" id="MS" value="MS" onclick="calculador.ms()">
+        <input type="button" value="x^2" onclick="calculador.operadoresEspeciales('x^')">
+        <input type="button" value="x^y" onclick="calculador.operadoresEspeciales('x^y')">
+        <input type="button" id="sin" value="sin" onclick="calculador.operadoresTrigonometricos(value)">
+        <input type="button" id="cos" value="cos" onclick="calculador.operadoresTrigonometricos(value)">
+        <input type="button" id="tan" value="tan" onclick="calculador.operadoresTrigonometricos(value)">
+        <input type="button" value="sqrt" onclick="calculador.operadoresUnNumero('sqrt')">
+        <input type="button" value="10^x" onclick="calculador.operadoresEspeciales('10^')">
+        <input type="button" value="log" onclick="calculador.operadoresUnNumero('log')">
+        <input type="button" value="Exp" onclick="calculador.operadoresUnNumero('exp')">
+        <input type="button" value="Mod" onclick="calculador.operador('Mod')">
+        <input type="button" value="inversos" onclick="calculador.inversos()">
+        <input type="button" value="CE" onclick="calculador.borrarTodo()">
+        <input type="button" value="C" onclick="calculador.borrarTodo()">
+        <input type="button" value="borrar" onclick="calculador.borrar()">
+        <input type="button" value="/" onclick="calculador.digito('/')">
+        <input type="button" value="pi" onclick="calculador.pi()">
+        <input type="button" value="7" onclick="calculador.digito('7')">
+        <input type="button" value="8" onclick="calculador.digito('8')">
+        <input type="button" value="9" onclick="calculador.digito('9')">
+        <input type="button" value="*" onclick="calculador.digito('*')">
+        <input type="button" value="n!" onclick="calculador.operadoresEspeciales('!')">
+        <input type="button" value="4" onclick="calculador.digito('4')">
+        <input type="button" value="5" onclick="calculador.digito('5')">
+        <input type="button" value="6" onclick="calculador.digito('6')">
+        <input type="button" value="-" onclick="calculador.digito('-')">
+        <input type="button" value="+-" onclick="calculador.operadoresEspeciales('+-')">
+        <input type="button" value="1" onclick="calculador.digito('1')">
+        <input type="button" value="2" onclick="calculador.digito('2')">
+        <input type="button" value="3" onclick="calculador.digito('3')">
+        <input type="button" value="+" onclick="calculador.digito('+')">
+        <input type="button" value="(" onclick="calculador.digito('(')">
+        <input type="button" value=")" onclick="calculador.digito(')')">
+        <input type="button" value="0" onclick="calculador.digito('0')">
+        <input type="button" value="," onclick="calculador.digito('.')">
+        <input type="button" value="=" onclick="calculador.operar()">
+        <input type="submit" value="Enviar" disabled>
+    </form>
+    </main>
+</body>
+</html>
