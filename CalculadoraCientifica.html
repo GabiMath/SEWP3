@@ -12,53 +12,21 @@
     <main>
       <form name="calculadora">
         <p id="display">0</p>
-        <input
-          type="button"
-          id="DEG"
-          value="DEG"
-          onclick="calculador.radianes(value)"
-        />
+        <input type="button" id="DEG" value="DEG" onclick="calculador.radianes(value)"/>
         <input type="button" value="HYP" onclick="calculador.hiperbolicos()" />
-        <input
-          type="button"
-          value="F-E"
-          onclick="calculador.notacionCientifica()"
-        />
-        <label>texto<input type="text" value="text" disabled /></label>
-        <label>texto<input type="text" value="text" disabled /></label>
+        <input type="button" value="F-E" onclick="calculador.notacionCientifica()"/>
+        <input type="reset" value="text" disabled />
+        <input type="reset" value="text" disabled />
         <input type="button" id="MC" value="MC" onclick="calculador.mrc()" />
         <input type="button" id="MR" value="MR" onclick="calculador.mr()" />
         <input type="button" id="M+" value="M+" onclick="calculador.mMas()" />
         <input type="button" id="M-" value="M-" onclick="calculador.mMenos()" />
         <input type="button" id="MS" value="MS" onclick="calculador.ms()" />
-        <input
-          type="button"
-          value="x^2"
-          onclick="calculador.operadoresEspeciales('x^')"
-        />
-        <input
-          type="button"
-          value="x^y"
-          onclick="calculador.operadoresEspeciales('x^y')"
-        />
-        <input
-          type="button"
-          id="sin"
-          value="sin"
-          onclick="calculador.operadoresTrigonometricos(value)"
-        />
-        <input
-          type="button"
-          id="cos"
-          value="cos"
-          onclick="calculador.operadoresTrigonometricos(value)"
-        />
-        <input
-          type="button"
-          id="tan"
-          value="tan"
-          onclick="calculador.operadoresTrigonometricos(value)"
-        />
+        <input type="button" value="x^2" onclick="calculador.operadoresEspeciales('x^')" />
+        <input type="button" value="x^y" onclick="calculador.operadoresEspeciales('x^y')" />
+        <input type="button" id="sin" value="sin" onclick="calculador.operadoresTrigonometricos(value)" />
+        <input type="button" id="cos" value="cos" onclick="calculador.operadoresTrigonometricos(value)" />
+        <input type="button" id="tan" value="tan" onclick="calculador.operadoresTrigonometricos(value)" />
         <input
           type="button"
           value="sqrt"

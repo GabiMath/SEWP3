@@ -76,7 +76,7 @@ input[value="0"] {
   font-size: 1.1em;
 }
 
-input[type="text"] {
+input[type="reset"] {
   width: 0;
   height: 0;
 }
