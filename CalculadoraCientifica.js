@@ -355,23 +355,35 @@ class CalculadoraCientifica extends Calculadora {
     } else if (evento.key == 'h'){ 
       this.hiperbolicos();
     } else if (evento.key == 'l'){
-      this.operadoresUnNumero('log')
+      this.operadoresUnNumero('log');
     } else if (evento.key == 'q'){
       this.operadoresUnNumero('sqrt');
     } else if (evento.key == 'e'){
-      this.operadoresUnNumero('exp')
+      this.operadoresUnNumero('exp');
     } else if (evento.key == '!'){
       this.operadoresEspeciales('!')
     } else if (evento.key == '{'){
-      this.operadoresEspeciales('x^')
+      this.operadoresEspeciales('x^');
     } else if (evento.key == 'y'){
-      this.operadoresEspeciales('x^y')
+      this.operadoresEspeciales('x^y');
     } else if (evento.key == '%'){
-      this.operadoresEspeciales('Mod')
+      this.operadoresEspeciales('Mod');
     } else if (evento.key == 'n'){
-      this.operadoresEspeciales('+-')
+      this.operadoresEspeciales('+-');
     } else if (evento.key == 'd'){
-      this.operadoresEspeciales('10^')
+      this.operadoresEspeciales('10^');
+    } else if (evento.key == 'm'){
+      this.ms();
+    } else if (evento.key == 'r'){
+      this.mr();
+    } else if (evento.key == 'g'){
+      this.mMas();
+    } else if (evento.key == 'f'){
+      this.mMenos();
+    } else if (evento.key == 'j'){
+      this.mrc();
+    } else if (evento.key == 'i'){
+      this.inversos();
     }
   }
 }
