@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora RPN</title>
+    <link href="CalculadoraRPN.css" rel="stylesheet" />
+    <script src="CalculadoraRPN.js"></script>
+  </head>
+  <body onkeyup="calculador.teclado(event)">
+    <h1>Calculadora RPN</h1>
+    <main>
+      <form name="calculadora">
+        <p id="display"></p>
+        <p id="actual"></p>
+        <input type="button" value="exp" onclick="calculador.exp()" />
+        <input type="button" value="sin" onclick="calculador.seno()" />
+        <input type="button" value="cos" onclick="calculador.coseno()" />
+        <input type="button" value="tan" onclick="calculador.tangente()" />
+        <input type="button" value="sqrt" onclick="calculador.sqrt()" />
+        <input type="button" value="arcsin" onclick="calculador.arcsen()" />
+        <input type="button" value="arccos" onclick="calculador.arccos()" />
+        <input type="button" value="arctan" onclick="calculador.arctan()" />
+        <input type="button" value="log" onclick="calculador.log()" />
+        <input type="button" value="C" onclick="calculador.borrarTodo()" />
+        <input type="button" value="borrar" onclick="calculador.desapilar()" />
+        <input type="button" value="/" onclick="calculador.dividir('/')" />
+        <input type="button" value="pi" onclick="calculador.pi()" />
+        <input type="button" value="7" onclick="calculador.pantalla('7')" />
+        <input type="button" value="8" onclick="calculador.pantalla('8')" />
+        <input type="button" value="9" onclick="calculador.pantalla('9')" />
+        <input type="button" value="*" onclick="calculador.multiplicar()" />
+        <input type="button" value="4" onclick="calculador.pantalla('4')" />
+        <input type="button" value="5" onclick="calculador.pantalla('5')" />
+        <input type="button" value="6" onclick="calculador.pantalla('6')" />
+        <input type="button" value="-" onclick="calculador.restar()" />
+        <input type="button" value="1" onclick="calculador.pantalla('1')" />
+        <input type="button" value="2" onclick="calculador.pantalla('2')" />
+        <input type="button" value="3" onclick="calculador.pantalla('3')" />
+        <input type="button" value="+" onclick="calculador.sumar()" />
+        <input type="button" value="Enter" onclick="calculador.apilar()" />
+        <input type="button" value="0" onclick="calculador.pantalla('0')" />
+        <input type="button" value="," onclick="calculador.pantalla('.')" />
+        <input type="submit" value="Enviar" disabled />
+      </form>
+      <section>
+        <h2>Aprenda a usar la calculadora RPN</h2>
+        <dl>
+          <dt>Entienda el concepto de pila.</dt>
+          <dd>
+            Una pila es una lista ordenada de datos que permite almacenar y
+            recuperar datos, en donde el último elemento añadido es el primero
+            en salir
+          </dd>
+          <dt>Entienda el concepto de calculadora RPN.</dt>
+          <dd>
+            Las calculadoras RPN utilizan la notación postfija o notación polaca
+            inversa (reverse polish notation). Evalúan las expresiones
+            utilizando una pila y no tienen el botón igual.
+          </dd>
+          <dt>Aprenda a operar</dt>
+          <dd>
+            El proceso para utilizar RPN es parecido al modo en
+            que aprendió matemáticas.
+          </dd>
+        </dl>
+        <p></p>
+        <p>He aquí un ejemplo:</p>
+        <p>Considere la expresión (3+2)/(4+6)=5/10=0.5</p>
+        <p>
+          En notación polaca inversa, debe ingresar número por número en la pila
+          y luego operar. Entonces, ingresará 3 en la pila, luego 2 y opera con
+          suma. Luego ingresa 4 y 6 a la pila, opera con suma y finalmente,
+          estos resultados están apilados, entonces solo queda operarlos con
+          división.
+        </p>
+        <ul>
+            <li>Para ingresar número a la pila oprima Enter</li>
+            <li>Para eliminar número de la pila oprima borrar/tecla atrás</li>
+            <li>Para sumar los últimos dos números de la pila oprima +</li>
+            <li>Para restar los últimos dos números de la pila oprima -</li>
+            <li>Para multiplicar los últimos dos números de la pila oprima *</li>
+            <li>Para dividir los últimos dos números de la pila oprima /</li>
+            <li>Para obtener el seno o arcsen del último número de la pila oprima sin/s o arcsin/S</li>
+            <li>Para obtener el coseno o arccos del último número de la pila oprima cos/c o arccos/C</li>
+            <li>Para obtener la tangente o arctan del último número de la pila oprima tan/t o arctan/T</li>
+            <li>Para obtener exponencial del último número de la pila oprima exp/e</li>
+            <li>Para obtener el logaritmo del último número de la pila oprima log/l</li>
+            <li>Para obtener la raíz cuadrada del último número de la pila oprima sqrt/q</li>
+            <li>Para apilar el número pi oprima pi/p</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
