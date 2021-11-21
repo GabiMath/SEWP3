@@ -19,7 +19,7 @@ main{
 form{
     display:grid;
     grid-template-columns: repeat(4, 5.2em);
-    grid-template-rows: 7em repeat(10, 2.8em);
+    grid-template-rows: 7em repeat(9, 2.8em);
     background-color: #c7c4c4;
     border-radius: 0.7em;
     color:#000;
@@ -45,7 +45,7 @@ input[type="submit"]{
 
 p[id="display"]{
     grid-column: 1 /-1;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
     padding: 0.4em;
     display: flex;
     margin: 0.3em 0.5em 0.3em;
