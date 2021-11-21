@@ -5,6 +5,12 @@ class Calculadora {
     this.mem = 0;
     this.contador = 0;
     this.resultado = "";
+
+    document.addEventListener('keydown', (evento) => {
+      this.teclado(evento)
+    });
+    
+
   }
 
   /**Añade digitos al display */
@@ -105,6 +111,7 @@ class Calculadora {
     } else if (evento.key == "Backspace") {
       this.borrarTodo();
     } else if (evento.key == "Enter") {
+      evento.preventDefault()
       this.igual();
     }
   }
@@ -307,6 +314,65 @@ class CalculadoraCientifica extends Calculadora {
       total = total * i;
     }
     return total;
+  }
+
+  teclado(evento){
+    const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    const operadores = ["*", "/", "+", "-"];
+    if (numeros.includes(evento.key) || operadores.includes(evento.key)) {
+      this.digito(evento.key);
+    } else if (evento.key == "Backspace") {
+      this.borrar();
+    } else if(evento.key == "Delete"){
+      this.borrarTodo();
+    } else if (evento.key == "Enter") {
+      evento.preventDefault()
+      this.operar();
+    } else if (evento.key == 's'){
+      if (document.getElementById("sin").value == "sin^{-1}"){
+        this.operadoresTrigonometricos('sin^{-1}');
+      } else if (document.getElementById("sin").value == "sinh"){
+        this.operadoresTrigonometricos('sinh');
+      } else {
+        this.operadoresTrigonometricos('sin');
+      }
+    } else if (evento.key == 'c'){
+      if (document.getElementById("cos").value == "cos^{-1}"){
+        this.operadoresTrigonometricos('cos^{-1}');
+      } else if (document.getElementById("cos").value == "cosh"){
+        this.operadoresTrigonometricos('cosh');
+      } else {
+        this.operadoresTrigonometricos('cos');
+      }
+    } else if (evento.key == 't'){
+      if (document.getElementById("tan").value == "tan^{-1}"){
+        this.operadoresTrigonometricos('tan^{-1}');
+      } else if (document.getElementById("tan").value == "tanh"){
+        this.operadoresTrigonometricos('tanh');
+      } else {
+        this.operadoresTrigonometricos('tan');
+      }
+    } else if (evento.key == 'h'){ 
+      this.hiperbolicos();
+    } else if (evento.key == 'l'){
+      this.operadoresUnNumero('log')
+    } else if (evento.key == 'q'){
+      this.operadoresUnNumero('sqrt');
+    } else if (evento.key == 'e'){
+      this.operadoresUnNumero('exp')
+    } else if (evento.key == '!'){
+      this.operadoresEspeciales('!')
+    } else if (evento.key == '{'){
+      this.operadoresEspeciales('x^')
+    } else if (evento.key == 'y'){
+      this.operadoresEspeciales('x^y')
+    } else if (evento.key == '%'){
+      this.operadoresEspeciales('Mod')
+    } else if (evento.key == 'n'){
+      this.operadoresEspeciales('+-')
+    } else if (evento.key == 'd'){
+      this.operadoresEspeciales('10^')
+    }
   }
 }
 
