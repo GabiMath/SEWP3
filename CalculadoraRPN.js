@@ -3,6 +3,10 @@ class CalculadoraRPN {
     this.pila = new Array();
     this.display = "";
     this.numero = "";
+
+    document.addEventListener('keydown', (evento) => {
+      this.teclado(evento)
+    });
   }
 
   pantalla(numero) {
@@ -216,7 +220,3 @@ class CalculadoraRPN {
 }
 
 var calculador = new CalculadoraRPN();
-
-document.addEventListener('keydown', (evento) => {
-    calculador.teclado(evento.key)
-  });
