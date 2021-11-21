@@ -81,6 +81,10 @@ input[type="text"] {
   height: 0;
 }
 
+label {
+  font-size: 0;
+}
+
 p[id="display"] {
   grid-column: 1 /-1;
   padding: 0.1em;
