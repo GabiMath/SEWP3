@@ -77,10 +77,8 @@ input[value="0"] {
 }
 
 input[type="text"] {
-  background-color: #e7e7e7;
-  color: #000;
-  margin: 0.2em;
-  border: none;
+  width: 0;
+  height: 0;
 }
 
 p[id="display"] {
