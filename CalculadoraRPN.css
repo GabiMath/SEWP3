@@ -48,18 +48,25 @@ p[id="display"]{
     grid-row: 1 / span 4;
     padding: 0.4em;
     display: flex;
-    margin: 0.3em 0.5em 0.2em;
+    margin: 0.3em 0.5em 0.3em;
     flex-direction: column;
     text-align: right;
     font-size: 1.3em;
     overflow-y: auto;
+    border-style: solid;
+    border-color: #505353;
+    border-radius: 0.2em;
 }
 
 p[id="actual"]{
+    padding:0.1em;
     grid-column: 1 /-1;
     display: flex;
     margin: 0em 0.5em 0.5em;
     font-size: 1.3em;
+    border-style: solid;
+    border-color: #505353;
+    border-radius: 0.2em;
 }
 
 section{
