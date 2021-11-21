@@ -177,7 +177,7 @@ class CalculadoraRPN {
   }
 
   teclado(evento) {
-    const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
     if (numeros.includes(evento.key)) {
       this.pantalla(evento.key);
     } else if (evento.key == "Backspace") {
