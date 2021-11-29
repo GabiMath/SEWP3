@@ -13,6 +13,12 @@ main{
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+section{
+    margin:2em;
+    max-width: 35em;
 }
 
 form{
