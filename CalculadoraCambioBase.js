@@ -1,6 +1,5 @@
 class CalculadoraCambioBase {
   constructor() {
-    this.pila = new Array();
     this.display = "";
     document.addEventListener("keydown", (evento) => {
       calculador.teclado(evento.key);
