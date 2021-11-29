@@ -1,199 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bill Gates</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="Ejercicio7.js"></script>
     <link rel="stylesheet" type="text/css" href="Ejercicio7.css" />
-  </head>
+</head>
+ 
+<body>
+  <h1>Bill Gates</h1>
+  <input type="button" value="Cambiar a título más informativo" onclick="documento.tituloMasInformativo()" />
+  <input type="button" value="Cambiar a título menos informativo" onclick="documento.tituloMenosInformativo()"/>
+  <section>
+  <h2>Introducción</h2>
+  <p>
+    William Henry Gates III, (Seattle, 1955). Conocido como Bill Gates. Fue
+    un empresario, informático y filántropo estadounidense. Fundó la
+    compañía de software Microsoft junto con Paul Allen. Desarrolló el
+    sistema operativo MS-DOS en 1981, que posteriormente se convirtió en
+    Windows 3.1 en 1992. Este sistema operativo evolucionó en múltiples
+    versiones mejoradas que continúan integradas en multitud de ordenadores
+    actuales. Sus contribuciones incidieron de forma determinante en la
+    creación de la Sociedad de la Información y del Conocimiento.
+  </p>
+  <p>
+    Su fortuna se calcula en 96.6 mil millones de dólares (2019) según la
+    revista Forbes, hecho que le coloca como el cuarto hombre más rico del
+    mundo.​ Antes del estallido de la burbuja de las punto com, su
+    patrimonio neto ascendió a 114 100 millones de dólares, lo que lo
+    convirtió en la décima persona más rica en toda la historia de la
+    humanidad.
+  </p>
+  <p>
+    Ha sido criticado por sus tácticas de negocios, que han sido
+    consideradas anticompetitivas, una opinión que en algunos casos ha sido
+    mantenida por numerosas sentencias judiciales.
+  </p>
+  </section>
+  <input type="button" value="Ocultar párrafos" onclick="documento.ocultarParrafos()" />
+  <input type="button" value="Mostrar párrafos" onclick="documento.mostrarParrafos()"/>  
+  <section>
+  <h3>Aportes</h3>
+  <ul id="aportes">
+  </ul>
+  </section>
+  <input type="button" value="Añadir Aporte" onclick="documento.añadirAporte()" /> 
+  <input type="button" value="Quitar Aportes" onclick="documento.quitarAportes()"/>  
+  <section>
+  <h4>Acciones de Microsoft</h4>
+  <p id="acciones">A continuación se muestran las acciones de Microsoft.</p>
+  <input type="button" value="Cambiar a descripción más detallada" onclick="documento.accionesMasDescripcion()" />
+  <input type="button" value="Cambiar a descripción menos detallada" onclick="documento.accionesMenosDescripcion()"/>  
+  <table>
+    <caption>
+      Cuenta de resultados MSFT Trimestral en USD
+    </caption>
+    <tr>
+      <th>Periodo terminado</th>
+      <th>2021 30/06</th>
+      <th>2021 31/03</th>
+      <th>2020 31/12</th>
+      <th>2020 30/09</th>
+    </tr>
+    <tr>
+      <th>Consumo y gastos externos</th>
+      <td>-13991</td>
+      <td>-13045</td>
+      <td>-14194</td>
+      <td>-11002</td>
+    </tr>
+    <tr>
+      <th>Beneficio bruto</th>
+      <td>32161</td>
+      <td>28661</td>
+      <td>28882</td>
+      <td>26152</td>
+    </tr>
+    <tr>
+      <th>Gastos de personal</th>
+      <td>-7379</td>
+      <td>-6409</td>
+      <td>-6086</td>
+      <td>-5350</td>
+    </tr>
+    <tr>
+      <th>Gastos de Investigación y desarrollo</th>
+      <td>-5687</td>
+      <td>-5204</td>
+      <td>-4889</td>
+      <td>-4926</td>
+    </tr>
+    <tr>
+      <th>Gastos extraordinarios</th>
+      <td>-5</td>
+      <td>-10</td>
+      <td>-2</td>
+      <td>-6</td>
+    </tr>
+    <tr>
+      <th>Resultado de explotación</th>
+      <td>19100</td>
+      <td>17038</td>
+      <td>17895</td>
+      <td>15870</td>
+    </tr>
+    <tr>
+      <th>Ingresos financieros</th>
+      <td>283</td>
+      <td>192</td>
+      <td>372</td>
+      <td>254</td>
+    </tr>
+    <tr>
+      <th>Otros ingresos de explotación</th>
+      <td>22</td>
+      <td>6</td>
+      <td>70</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Resultado ordinario antes de impuestos</th>
+      <td>19405</td>
+      <td>17236</td>
+      <td>18337</td>
+      <td>16124</td>
+    </tr>
+    <tr>
+      <th>
+        Resultado del ejercicio procedente de las operaciones continuadas
+      </th>
+      <td>16458</td>
+      <td>15457</td>
+      <td>15463</td>
+      <td>13893</td>
+    </tr>
+    <tr>
+        <th>
+          Resultado atribuido al grupo
+        </th>
+        <td>20505</td>
+        <td>16258</td>
+        <td>15457</td>
+        <td>15463</td>
+    </tr>
+    <tr><th>
+        Total
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
-  <body>
-    <h1>Bill Gates</h1>
-    <input
-      type="button"
-      value="Cambiar a título más informativo"
-      onclick="documento.tituloMasInformativo()"
-    />
-    <input
-      type="button"
-      value="Cambiar a título menos informativo"
-      onclick="documento.tituloMenosInformativo()"
-    />
-    <section>
-      <h2>Introducción</h2>
-      <p>
-        William Henry Gates III, (Seattle, 1955). Conocido como Bill Gates. Fue
-        un empresario, informático y filántropo estadounidense. Fundó la
-        compañía de software Microsoft junto con Paul Allen. Desarrolló el
-        sistema operativo MS-DOS en 1981, que posteriormente se convirtió en
-        Windows 3.1 en 1992. Este sistema operativo evolucionó en múltiples
-        versiones mejoradas que continúan integradas en multitud de ordenadores
-        actuales. Sus contribuciones incidieron de forma determinante en la
-        creación de la Sociedad de la Información y del Conocimiento.
-      </p>
-      <p>
-        Su fortuna se calcula en 96.6 mil millones de dólares (2019) según la
-        revista Forbes, hecho que le coloca como el cuarto hombre más rico del
-        mundo.​ Antes del estallido de la burbuja de las punto com, su
-        patrimonio neto ascendió a 114 100 millones de dólares, lo que lo
-        convirtió en la décima persona más rica en toda la historia de la
-        humanidad.
-      </p>
-      <p>
-        Ha sido criticado por sus tácticas de negocios, que han sido
-        consideradas anticompetitivas, una opinión que en algunos casos ha sido
-        mantenida por numerosas sentencias judiciales.
-      </p>
-    <input
-      type="button"
-      value="Ocultar párrafos"
-      onclick="documento.ocultarParrafos()"
-    />
-    <input
-      type="button"
-      value="Mostrar párrafos"
-      onclick="documento.mostrarParrafos()"
-    />
-    </section>
-    <section>
-      <h3>Aportes</h3>
-      <ul id="aportes"></ul>
-    
-    <input
-      type="button"
-      value="Añadir Aporte"
-      onclick="documento.añadirAporte()"
-    />
-    <input
-      type="button"
-      value="Quitar Aportes"
-      onclick="documento.quitarAportes()"
-    />
-  </section>
-    <section>
-      <h4>Acciones de Microsoft</h4>
-      <p id="acciones">A continuación se muestran las acciones de Microsoft.</p>
-      <input
-        type="button"
-        value="Cambiar a descripción más detallada"
-        onclick="documento.accionesMasDescripcion()"
-      />
-      <input
-        type="button"
-        value="Cambiar a descripción menos detallada"
-        onclick="documento.accionesMenosDescripcion()"
-      />
-      <table>
-        <caption>
-          Cuenta de resultados MSFT Trimestral en USD
-        </caption>
-        <tr>
-          <th>Periodo terminado</th>
-          <th>2021 30/06</th>
-          <th>2021 31/03</th>
-          <th>2020 31/12</th>
-          <th>2020 30/09</th>
-        </tr>
-        <tr>
-          <th>Consumo y gastos externos</th>
-          <td>-13991</td>
-          <td>-13045</td>
-          <td>-14194</td>
-          <td>-11002</td>
-        </tr>
-        <tr>
-          <th>Beneficio bruto</th>
-          <td>32161</td>
-          <td>28661</td>
-          <td>28882</td>
-          <td>26152</td>
-        </tr>
-        <tr>
-          <th>Gastos de personal</th>
-          <td>-7379</td>
-          <td>-6409</td>
-          <td>-6086</td>
-          <td>-5350</td>
-        </tr>
-        <tr>
-          <th>Gastos de Investigación y desarrollo</th>
-          <td>-5687</td>
-          <td>-5204</td>
-          <td>-4889</td>
-          <td>-4926</td>
-        </tr>
-        <tr>
-          <th>Gastos extraordinarios</th>
-          <td>-5</td>
-          <td>-10</td>
-          <td>-2</td>
-          <td>-6</td>
-        </tr>
-        <tr>
-          <th>Resultado de explotación</th>
-          <td>19100</td>
-          <td>17038</td>
-          <td>17895</td>
-          <td>15870</td>
-        </tr>
-        <tr>
-          <th>Ingresos financieros</th>
-          <td>283</td>
-          <td>192</td>
-          <td>372</td>
-          <td>254</td>
-        </tr>
-        <tr>
-          <th>Otros ingresos de explotación</th>
-          <td>22</td>
-          <td>6</td>
-          <td>70</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <th>Resultado ordinario antes de impuestos</th>
-          <td>19405</td>
-          <td>17236</td>
-          <td>18337</td>
-          <td>16124</td>
-        </tr>
-        <tr>
-          <th>
-            Resultado del ejercicio procedente de las operaciones continuadas
-          </th>
-          <td>16458</td>
-          <td>15457</td>
-          <td>15463</td>
-          <td>13893</td>
-        </tr>
-        <tr>
-          <th>Resultado atribuido al grupo</th>
-          <td>20505</td>
-          <td>16258</td>
-          <td>15457</td>
-          <td>15463</td>
-        </tr>
-        <tr>
-          <th>Total</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-    
-    <input type="button" value="Sumar Filas" onclick="documento.sumarFilas()" />
-    <input
-      type="button"
-      value="Sumar Columnas"
-      onclick="documento.sumarColumnas()"
-    />
-    <input
-      type="button"
-      value="Recorrer DOM"
-      onclick="documento.recorrerDOM()"
-    />
-  </section>
-  </body>
+  </table>
+</section>
+  <input type="button" value="Sumar Filas" onclick="documento.sumarFilas()"/>
+  <input type="button" value="Sumar Columnas" onclick="documento.sumarColumnas()"/>
+  <input type="button" value="Recorrer DOM" onclick="documento.recorrerDOM()"/>
+</body>
 </html>
