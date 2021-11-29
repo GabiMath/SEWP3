@@ -1,8 +1,8 @@
 class CalculadoraCambioBase {
   constructor() {
     this.display = "";
-    document.addEventListener("keydown", (evento) => {
-      calculador.teclado(evento.key);
+    document.addEventListener('keydown', (evento) => {
+      this.teclado(evento)
     });
   }
 
