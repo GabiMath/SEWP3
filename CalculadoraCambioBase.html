@@ -1,144 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Cambio de Base</title>
     <link href="CalculadoraCambioBase.css" rel="stylesheet" />
     <script src="CalculadoraCambioBase.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Calculadora Cambio de Base</h1>
     <main>
-    <form name="calculadora">
+      <form name="calculadora">
         <p id="display"></p>
         <p id="actual"></p>
-        <input type="button" value="Base 2" onclick="calculador.cambioBase2()">
-        <input type="button" value="Base 3" onclick="calculador.cambioBase3()">
-        <input type="button" value="Base 5" onclick="calculador.cambioBase5()">
-        <input type="button" value="Base 7" onclick="calculador.cambioBase7()">
-        <input type="button" value="Base 8" onclick="calculador.cambioBase8()">
-        <input type="button" value="Base 10" onclick="calculador.cambioBase10()">
-        <input type="button" value="Base 12" onclick="calculador.cambioBase12()">
-        <input type="button" value="Base 16" onclick="calculador.cambioBase16()">
-        <input type="button" value="Base 20" onclick="calculador.cambioBase20()">
-        <input type="button" value="7" onclick="calculador.digito('7')">
-        <input type="button" value="8" onclick="calculador.digito('8')">
-        <input type="button" value="9" onclick="calculador.digito('9')">
-        <input type="button" value="4" onclick="calculador.digito('4')">
-        <input type="button" value="5" onclick="calculador.digito('5')">
-        <input type="button" value="6" onclick="calculador.digito('6')">
-        <input type="button" value="1" onclick="calculador.digito('1')">
-        <input type="button" value="2" onclick="calculador.digito('2')">
-        <input type="button" value="3" onclick="calculador.digito('3')">
-        <input type="button" value="C" onclick="calculador.borrarTodo()">
-        <input type="button" value="0" onclick="calculador.digito('0')">
-        <input type="button" value="borrar" onclick="calculador.borrar()">
+        <input
+          type="button"
+          value="Base 2"
+          onclick="calculador.cambioBase2()"
+        />
+        <input
+          type="button"
+          value="Base 3"
+          onclick="calculador.cambioBase3()"
+        />
+        <input
+          type="button"
+          value="Base 5"
+          onclick="calculador.cambioBase5()"
+        />
+        <input
+          type="button"
+          value="Base 7"
+          onclick="calculador.cambioBase7()"
+        />
+        <input
+          type="button"
+          value="Base 8"
+          onclick="calculador.cambioBase8()"
+        />
+        <input
+          type="button"
+          value="Base 10"
+          onclick="calculador.cambioBase10()"
+        />
+        <input
+          type="button"
+          value="Base 12"
+          onclick="calculador.cambioBase12()"
+        />
+        <input
+          type="button"
+          value="Base 16"
+          onclick="calculador.cambioBase16()"
+        />
+        <input
+          type="button"
+          value="Base 20"
+          onclick="calculador.cambioBase20()"
+        />
+        <input type="button" value="7" onclick="calculador.digito('7')" />
+        <input type="button" value="8" onclick="calculador.digito('8')" />
+        <input type="button" value="9" onclick="calculador.digito('9')" />
+        <input type="button" value="4" onclick="calculador.digito('4')" />
+        <input type="button" value="5" onclick="calculador.digito('5')" />
+        <input type="button" value="6" onclick="calculador.digito('6')" />
+        <input type="button" value="1" onclick="calculador.digito('1')" />
+        <input type="button" value="2" onclick="calculador.digito('2')" />
+        <input type="button" value="3" onclick="calculador.digito('3')" />
+        <input type="button" value="C" onclick="calculador.borrarTodo()" />
+        <input type="button" value="0" onclick="calculador.digito('0')" />
+        <input type="button" value="borrar" onclick="calculador.borrar()" />
         <input type="submit" value="Enviar" disabled />
-    </form>
+      </form>
 
-    <section>
-        <h2>Aprenda a usar la calculadora RPN</h2>
-        <p><strong>He aquí un ejemplo:</strong></p>
-        <p>Considere la expresión (3+2)/(4+6)=5/10=0.5</p>
-        <p>
-          En notación polaca inversa, debe ingresar número por número en la pila
-          y luego operar. Entonces, ingresará <strong>3</strong> en la pila con
-          <strong>Enter</strong>, luego el número <strong>2</strong> con
-          <strong>Enter</strong> y opera con <strong>suma</strong>. Luego
-          ingresa <strong>4</strong> con <strong>Enter</strong> y
-          <strong>6</strong> con <strong>Enter</strong> a la pila, opera con
-          <strong>suma</strong> y finalmente, estos resultados están apilados,
-          entonces solo queda operarlos con <strong>división</strong>.</p>
-        </p>
-        <dl>
-          <dt>Entienda el concepto de pila.</dt>
-          <dd>
-            Una pila es una lista ordenada de datos que permite almacenar y
-            recuperar datos, en donde el último elemento añadido es el primero
-            en salir
-          </dd>
-          <dt>Entienda el concepto de calculadora RPN.</dt>
-          <dd>
-            Las calculadoras RPN utilizan la notación postfija o notación polaca
-            inversa (reverse polish notation). Evalúan las expresiones
-            utilizando una pila y no tienen el botón igual.
-          </dd>
-          <dt>Aprenda a operar</dt>
-          <dd>
-            El proceso para utilizar RPN es parecido al modo en que aprendió
-            matemáticas.
-          </dd>
-        </dl>
+      <section>
+        <h2>Atajos de teclado</h2>
         <ul>
+          <li><strong>Tecla "supr":</strong> Borrar Todo.</li>
+          <li><strong>Tecla "b":</strong> Cambio a base binaria.</li>
           <li>
-            Para <strong>ingresar número</strong> a la pila oprima
-            <strong>Enter</strong>
+            <strong>Tecla "o":</strong> Cambio a base octal.
           </li>
           <li>
-            Para <strong>eliminar</strong> número de la pila oprima
-            <strong>borrar</strong> o la
-            <strong>tecla atrás en el teclado</strong>
+            <strong>Tecla "d":</strong> Cambio a base decimal.
           </li>
           <li>
-            Para <strong>sumar</strong> los últimos dos números de la pila
-            oprima <strong>+</strong>
-          </li>
-          <li>
-            Para <strong>restar</strong> los últimos dos números de la pila
-            oprima <strong>-</strong>
-          </li>
-          <li>
-            Para <strong>multiplicar</strong> los últimos dos números de la pila
-            oprima <strong>*</strong>
-          </li>
-          <li>
-            Para <strong>dividir</strong> los últimos dos números de la pila
-            oprima <strong>/</strong>
-          </li>
-          <li>
-            Para obtener el <strong>seno</strong> o <strong>arcsen</strong> del
-            último número de la pila oprima <strong>sin</strong> o
-            <strong>s</strong> en el teclado del computador o
-            <strong>arcsin</strong> o
-            <strong>S en el teclado del computador</strong> respectivamente
-          </li>
-          <li>
-            Para obtener el <strong>coseno</strong> o
-            <strong>arccos</strong> del último número de la pila oprima
-            <strong>cos</strong> o <strong>c en el teclado</strong> del
-            computador o <strong>arccos</strong> o
-            <strong>C en el teclado</strong> del computador respectivamente
-          </li>
-          <li>
-            Para obtener la <strong>tangente</strong> o
-            <strong>arctan</strong> del último número de la pila oprima
-            <strong>tan</strong> o <strong>t en el teclado</strong> del
-            computador o <strong>arctan</strong> o
-            <strong>T en el teclado</strong> del computador respectivamente
-          </li>
-          <li>
-            Para obtener <strong>exponencial</strong> del último número de la
-            pila oprima <strong>exp</strong> o
-            <strong>e en el teclado</strong> del computador
-          </li>
-          <li>
-            Para obtener el <strong>logaritmo</strong> del último número de la
-            pila oprima <strong>log</strong> o
-            <strong>l en el teclado</strong> del computador
-          </li>
-          <li>
-            Para obtener la <strong>raíz cuadrada</strong> del último número de
-            la pila oprima <strong>sqrt</strong> o
-            <strong>q en el teclado</strong> del computador
-          </li>
-          <li>
-            Para apilar el número <strong>pi</strong> oprima
-            <strong>pi</strong> o <strong>p en el teclado</strong> del
-            computador
+            <strong>Tecla "h":</strong> Cambio a base hexadecimal.
           </li>
         </ul>
       </section>
     </main>
-</body>
+  </body>
 </html>
