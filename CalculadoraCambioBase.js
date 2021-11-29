@@ -6,52 +6,52 @@ class CalculadoraCambioBase {
 
   digito(numero) {
     this.display += numero.toString();
-    document.getElementById("display").innerHTML = this.display;
+    document.getElementById("actual").innerHTML = this.display;
   }
 
   cambioBase2() {
     var resultado = Number(this.display).toString(2);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase3() {
     var resultado = Number(this.display).toString(3);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase5() {
     var resultado = Number(this.display).toString(5);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase7() {
     var resultado = Number(this.display).toString(7);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase8() {
     var resultado = Number(this.display).toString(8);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase10() {
     var resultado = Number(this.display).toString(10);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase12() {
     var resultado = Number(this.display).toString(12);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase16() {
     var resultado = Number(this.display).toString(16);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   cambioBase20() {
     var resultado = Number(this.display).toString(20);
-    document.getElementById("actual").innerHTML = resultado;
+    document.getElementById("display").innerHTML = resultado;
   }
 
   borrar() {

@@ -34,27 +34,40 @@ input[type="button"] {
     border-radius: 0.3em;
 }
 
+input[type="submit"]{
+    height: 0;
+    border: none;
+    background-color: #62656b;
+    color:#000;
+}
+
 p[id="display"]{
     grid-column: 1 /-1;
-    padding: 0.2em;
+    padding: 0.4em;
     display: flex;
-    margin: 0.5em 0.5em 0.5em;
+    margin: 0.3em 0.5em 0.3em;
     flex-direction: column;
-    align-items: flex-end;
     text-align: right;
-    justify-content: space-between;
-    word-break: break-all;
-    font-size: 1.7em;
-    border-radius: 0.3em;
+    font-size: 1.5em;
+    overflow-y: auto;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0.2em;
+    background-color: #dadfe6;
+    color: #000;
 }
 
 p[id="actual"]{
+    padding:0.1em;
     grid-column: 1 /-1;
     display: flex;
-    padding: 0.4em;
-    margin: 0em 0.5em 0.2em;
-    border-radius: 0.3em;
-    font-size: 2em;
+    margin: 0em 0.5em 0.5em;
+    font-size: 1.5em;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0.2em;
+    background-color: #dadfe6;
+    color: #000;
 }
 
 input[type="button"]:active {
