@@ -2,6 +2,9 @@ class CalculadoraCambioBase {
   constructor() {
     this.pila = new Array();
     this.display = "";
+    document.addEventListener("keydown", (evento) => {
+      calculador.teclado(evento.key);
+    });
   }
 
   digito(numero) {
@@ -88,6 +91,3 @@ class CalculadoraCambioBase {
 
 var calculador = new CalculadoraCambioBase();
 
-document.addEventListener("keydown", (evento) => {
-  calculador.teclado(evento.key);
-});
