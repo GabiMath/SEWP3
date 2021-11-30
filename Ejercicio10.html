@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Precio del petróleo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Ejercicio10.js"></script>
+    <link rel="stylesheet" type="text/css" href="Ejercicio10.css" />
+  </head>
+  <body>
+    <h1>
+      Variación del precio del petróleo
+      <a href="https://commodities-api.com/api/">Commodities-Api</a>
+    </h1>
+    <p>
+    Este precio es un indicador importante para los mercados bursátiles y la
+    economía mundial. El petróleo se utiliza no solo como combustible, sino
+    también como materia prima para la producción de diversos productos
+    industriales. Las fluctuaciones de precios tienen efectos globales en los
+    mercados financieros.
+    </p>
+    <p id="botones">
+      <button onclick="petroleo.cargarDatos('EUR')">EUR</button>
+      <button onclick="petroleo.cargarDatos('COP')">COP</button>
+      <button onclick="petroleo.cargarDatos('GBP')">GBP</button>
+      <button onclick="petroleo.cargarDatos('USD')">USD</button>
+      <button onclick="petroleo.cargarDatos('MXN')">MXN</button>
+    </p>
+    <p id="sampleChart"></p>
+  </body>
+</html>
