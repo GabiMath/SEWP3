@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa KML</title>
     <script src="MapaKML.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
-    <link href="MapaKML.css" rel="stylesheet">
-    
+    <link href="MapaKML.css" rel="stylesheet" />
   </head>
-  <body >
+  <body>
     <h1>Mapa KML</h1>
 
     <p>Seleccione un archivo de texto:</p>
-    <p>
-      <input type="file" id="archivo" onchange="archivo.cargarArchivo(this.files);" />
-    </p>
+    <form>
+      <label
+        >Oprime para ingresar un archivo
+        <input
+          type="file"
+          id="archivo"
+          onchange="archivo.cargarArchivo(this.files);"
+      /></label>
+
+      <input type="submit" value="Enviar" disabled />
+    </form>
     <p id="map"></p>
   </body>
 </html>
