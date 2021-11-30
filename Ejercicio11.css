@@ -15,10 +15,10 @@ h3 {
   text-align: center;
 }
 
-button{
-    background-color: #061433;
-    color: white;
-    border-radius: 0.8em;
-    cursor: pointer;
-    padding: 0.5em 1em;
-  }
+button {
+  background-color: #061433;
+  color: white;
+  border-radius: 0.8em;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
