@@ -6,9 +6,10 @@ class Archivo {
       //El navegador soporta el API File
       document.getElementById("soporte").innerHTML =
         "Este navegador soporta el API File";
-    } else
+    } else{
       document.getElementById("soporte").innerHTML =
         "¡¡¡ Este navegador NO soporta el API File y este programa puede no funcionar correctamente !!!";
+      document.getElementById("archivoTexto").disabled = true;}
   }
 
   leerArchivoTexto(files) {
