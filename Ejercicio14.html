@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>API File: Leer un archivo de texto</title>
+    <script src="Ejercicio14.js"></script>
+    <link href="Ejercicio14.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <h2>¡Antes de empezar!</h2>
+    <p>Nos falta la imagen de la banana, busca el archivo y cárgala.</p>
+    <input type="file" onchange="fruta.cargarImagen()">
+    
+        <h2>Arrastra cada imagen de la fruta a su caja:</h2>
+    <p class="grupoFrutas">
+
+            <span class="fruta "id="div1" ondrop="fruta.drop(event)" ondragover="fruta.allowDrop(event)">
+                Manzana
+            </span>
+            <span class="fruta" id="div2" ondrop="fruta.drop(event)" ondragover="fruta.allowDrop(event)">
+                Fresa
+            </span>
+            <span class="fruta" id="div3" ondrop="fruta.drop(event)" ondragover="fruta.allowDrop(event)">
+                Banana
+            </span>
+    </p>
+    <br>
+    <p class="grupoFrutas">
+        <img id="drag1" src="manzana.jpeg" alt="Falta imagen de Manzana" draggable="true" ondragstart="fruta.drag(event,'manzana')">
+
+        <img id="drag2" src="fresa.jpg" alt="Falta imagen de Fresa" draggable="true" ondragstart="fruta.drag(event,'fresa')">
+
+        <img id="drag3" src="" draggable="true" alt="Falta imagen de Banana" ondragstart="fruta.drag(event,'banana')">
+    </p>
+    <br>
+    <h2>La última fruta que se movió es: <span id="ultimaFruta"></span></h2>
+    <br>
+
+
+
+</body>
+
+</html>

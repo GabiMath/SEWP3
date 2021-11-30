@@ -1,0 +1,27 @@
+p[class="grupoFrutas"] {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+}
+
+.fruta {
+    flex: 2;
+    padding: 0.5em;
+    border: 0.2em solid #000;
+    text-align: center;
+}
+
+img {
+    flex: 1;
+    padding: 1em;
+    width: 50%;
+    height: 50%;
+}
+
+#div1,
+#div2,
+#div3 {
+    width: 100%;
+    height: auto;
+}
