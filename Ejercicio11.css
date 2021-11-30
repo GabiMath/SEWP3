@@ -1,3 +1,8 @@
+#mapa {
+  width: 100%;
+  height: 50vw;
+}
+
 body {
   font-family: arial, sans-serif;
   color: #000000;
