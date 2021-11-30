@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mapa Dinámico Google</title>
-    <link href="Ejercicio11.css" rel="stylesheet"/>
+    <link href="Ejercicio11.css" rel="stylesheet" />
     <script src="Ejercicio11.js"></script>
-</head>
-<body>
-    <h1>Uso de geolocalización para crear un mapa dinámico de Google maps</h1>
-    <h2>Representa la imagen de un mapa dinámico y la posición del usuario</h2>
+  </head>
+  <body>
+    <h1>Distancia entre dos lugares</h1>
+    <p>A continuación ingresa las coordenadas de los dos puntos para calcular su distancia.</p>
+    <form>
+        <label>Longitud 1 <input id="lon1" type="text" value="-5.8502461"  /></label>
+        <label>Latitud 1 <input id="lat1" type="text" value="43.3672702"  /></label>
+        <label>Longitud 2 <input id="lon2" type="text" value="-5.8502461"  /></label>
+        <label>Latitud 2 <input id="lat2" type="text" value="43.3672702"  /></label>
+        <input type="button" value="Enviar" onclick="miPosicion.mapa()" />
+      <input type="submit" value="Enviar" onclick="miPosicion.mapa()" disabled/>
+    </form>
+    <p id="distancia"></p>
     <main id="mapa"></main>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=miPosicion.mapa"></script>
-
-</body>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=miPosicion.mapa"
+    ></script>
+  </body>
 </html>
