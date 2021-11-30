@@ -14,3 +14,11 @@ h3 {
   padding: 0.3em;
   text-align: center;
 }
+
+input[type="button"]{
+    background-color: #061433;
+    color: white;
+    border-radius: 0.8em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+  }
