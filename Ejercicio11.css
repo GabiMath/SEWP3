@@ -15,7 +15,7 @@ h3 {
   text-align: center;
 }
 
-input[type="button"]{
+button{
     background-color: #061433;
     color: white;
     border-radius: 0.8em;
