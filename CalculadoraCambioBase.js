@@ -1,81 +1,290 @@
-class CalculadoraCambioBase {
+class CalculadoraRPN {
   constructor() {
+    this.pila = new Array();
     this.display = "";
-    document.addEventListener('keydown', (evento) => {
-      this.teclado(evento)
+    this.numero = "";
+
+    document.addEventListener("keydown", (evento) => {
+      this.teclado(evento);
     });
   }
 
-  digito(numero) {
-    this.display += numero.toString();
-    document.getElementById("actual").innerHTML = this.display;
+  pantalla(numero) {
+    this.numero += numero;
+    document.getElementById("actual").innerHTML = this.numero;
   }
 
-  cambioBase2() {
-    var resultado = Number(this.display).toString(2);
-    document.getElementById("display").innerHTML = resultado;
+  apilar() {
+    if (this.numero.length != 0) {
+      this.pila.push(this.numero);
+      this.numero = "";
+      this.mostrar();
+    } else {
+      this.error("Ingrese algún número para apilarlo");
+    }
   }
 
-  cambioBase3() {
-    var resultado = Number(this.display).toString(3);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase5() {
-    var resultado = Number(this.display).toString(5);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase7() {
-    var resultado = Number(this.display).toString(7);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase8() {
-    var resultado = Number(this.display).toString(8);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase10() {
-    var resultado = Number(this.display).toString(10);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase12() {
-    var resultado = Number(this.display).toString(12);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase16() {
-    var resultado = Number(this.display).toString(16);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  cambioBase20() {
-    var resultado = Number(this.display).toString(20);
-    document.getElementById("display").innerHTML = resultado;
-  }
-
-  borrar() {
-    var nuevo = this.display.substring(0, this.display.length - 1);
-    this.display = nuevo;
+  error(mensaje) {
+    this.display = mensaje;
     document.getElementById("display").innerHTML = this.display;
+    this.display = "";
+    this.numero = "";
+  }
+
+  desapilar() {
+    if (this.numero != "") {
+      var numero = this.numero.substring(0, this.numero.length - 1);
+      this.numero = numero;
+      document.getElementById("actual").innerHTML = this.numero;
+    } else {
+      this.pila.pop();
+      this.mostrar();
+    }
+  }
+
+  mostrar() {
+    this.numero = "";
+    document.getElementById("actual").innerHTML = this.numero;
+    var stringPila = "";
+    for (var i = this.pila.length - 1; i >= 0; i--)
+      stringPila += "<span>" + this.pila[i] + "</span>";
+    this.display = stringPila;
+    document.getElementById("display").innerHTML = this.display;
+  }
+
+  exp() {
+    var resultado = Math.exp(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+    console.log(resultado);
+  }
+
+  sumar() {
+    if (this.pila.length < 2) {
+      this.error("ERROR, ingrese otro número para efectuar la operación");
+    } else {
+      var resultado = Number(this.pila.pop()) + Number(this.pila.pop());
+      this.numero = resultado;
+      this.apilar();
+      this.mostrar();
+    }
+  }
+
+  restar() {
+    if (this.pila.length < 2) {
+      this.error("ERROR, ingrese otro número para efectuar la operación");
+    } else {
+      var resultado = -Number(this.pila.pop()) + Number(this.pila.pop());
+      this.numero = resultado;
+      this.apilar();
+      this.mostrar();
+    }
+  }
+
+  multiplicar() {
+    if (this.pila.length < 2) {
+      this.error("ERROR, ingrese otro número para efectuar la operación");
+    } else {
+      var resultado = Number(this.pila.pop()) * Number(this.pila.pop());
+      this.numero = resultado;
+      this.apilar();
+      this.mostrar();
+    }
+  }
+
+  dividir() {
+    if (this.pila.length < 2) {
+      this.error("ERROR, ingrese otro número para efectuar la operación");
+    } else {
+      var resultado = (1 / Number(this.pila.pop())) * Number(this.pila.pop());
+      this.numero = resultado;
+      this.apilar();
+      this.mostrar();
+    }
+  }
+
+  seno() {
+    var resultado = Math.sin(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  pi() {
+    var resultado = Math.PI;
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  coseno() {
+    var resultado = Math.cos(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  tangente() {
+    var resultado = Math.tan(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  sqrt() {
+    var resultado = Math.sqrt(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  arcsen() {
+    var resultado = Math.asin(Number(this.pila.pop()));
+    console.log(resultado);
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  arccos() {
+    var resultado = Math.acos(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  arctan() {
+    var resultado = Math.atan(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
   }
 
   borrarTodo() {
-    this.display = "";
-    document.getElementById("display").innerHTML = this.display;
-    document.getElementById("actual").innerHTML = "";
+    this.pila.length = 0;
+    this.mostrar();
+  }
+
+  log() {
+    var resultado = Math.log(Number(this.pila.pop()));
+    this.numero = resultado;
+    this.apilar();
+    this.mostrar();
+  }
+
+  teclado(evento) {
+    const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
+    if (numeros.includes(evento.key)) {
+      this.pantalla(evento.key);
+    } else if (evento.key == "Backspace") {
+      this.desapilar();
+    } else if (evento.key == "Delete") {
+      this.borrarTodo();
+    } else if (evento.key == "Enter") {
+      evento.preventDefault();
+      this.apilar();
+    } else if (evento.key == "+") {
+      this.sumar();
+    } else if (evento.key == "-") {
+      this.restar();
+    } else if (evento.key == "*") {
+      this.multiplicar();
+    } else if (evento.key == "/") {
+      this.dividir();
+    } else if (evento.key == "s") {
+      this.seno();
+    } else if (evento.key == "c") {
+      this.coseno();
+    } else if (evento.key == "t") {
+      this.tangente();
+    } else if (evento.key == "S") {
+      this.arcsen();
+    } else if (evento.key == "C") {
+      this.arccos();
+    } else if (evento.key == "T") {
+      this.arctan();
+    } else if (evento.key == "e") {
+      this.exp();
+    } else if (evento.key == "l") {
+      this.log();
+    } else if (evento.key == "q") {
+      this.sqrt();
+    } else if (evento.key == "p") {
+      this.pi();
+    }
+  }
+}
+
+class CalculadoraCambioBase extends CalculadoraRPN {
+  constructor() {
+    super();
+  }
+
+  cambioBase2() {
+    var resultado = Number(this.pila.pop()).toString(2);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase3() {
+    var resultado = Number(this.pila.pop()).toString(3);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase5() {
+    var resultado = Number(this.pila.pop()).toString(5);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase7() {
+    var resultado = Number(this.pila.pop()).toString(7);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase8() {
+    var resultado = Number(this.pila.pop()).toString(8);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase10() {
+    var resultado = Number(this.pila.pop()).toString(10);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase12() {
+    var resultado = Number(this.pila.pop()).toString(12);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase16() {
+    var resultado = Number(this.pila.pop()).toString(16);
+    this.numero = resultado;
+    this.apilar();
+  }
+
+  cambioBase20() {
+    var resultado = Number(this.pila.pop()).toString(20);
+    this.numero = resultado;
+    this.apilar();
   }
 
   teclado(evento) {
     const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     if (numeros.includes(evento.key)) {
-      this.digito(evento.key);
+      this.pantalla(evento.key);
     } else if (evento.key == "Backspace") {
-      this.borrar();
+      this.desapilar();
     } else if (evento.key == "Delete") {
       this.borrarTodo();
+    } else if (evento.key == "Enter") {
+      this.apilar();
     } else if (evento.key == "b") {
       this.cambioBase2();
     } else if (evento.key == "o") {
@@ -89,4 +298,3 @@ class CalculadoraCambioBase {
 }
 
 var calculador = new CalculadoraCambioBase();
-

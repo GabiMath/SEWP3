@@ -53,23 +53,19 @@
           value="Base 16"
           onclick="calculador.cambioBase16()"
         />
-        <input
-          type="button"
-          value="Base 20"
-          onclick="calculador.cambioBase20()"
-        />
-        <input type="button" value="7" onclick="calculador.digito('7')" />
-        <input type="button" value="8" onclick="calculador.digito('8')" />
-        <input type="button" value="9" onclick="calculador.digito('9')" />
-        <input type="button" value="4" onclick="calculador.digito('4')" />
-        <input type="button" value="5" onclick="calculador.digito('5')" />
-        <input type="button" value="6" onclick="calculador.digito('6')" />
-        <input type="button" value="1" onclick="calculador.digito('1')" />
-        <input type="button" value="2" onclick="calculador.digito('2')" />
-        <input type="button" value="3" onclick="calculador.digito('3')" />
         <input type="button" value="C" onclick="calculador.borrarTodo()" />
-        <input type="button" value="0" onclick="calculador.digito('0')" />
-        <input type="button" value="borrar" onclick="calculador.borrar()" />
+        <input type="button" value="7" onclick="calculador.pantalla('7')" />
+        <input type="button" value="8" onclick="calculador.pantalla('8')" />
+        <input type="button" value="9" onclick="calculador.pantalla('9')" />
+        <input type="button" value="4" onclick="calculador.pantalla('4')" />
+        <input type="button" value="5" onclick="calculador.pantalla('5')" />
+        <input type="button" value="6" onclick="calculador.pantalla('6')" />
+        <input type="button" value="1" onclick="calculador.pantalla('1')" />
+        <input type="button" value="2" onclick="calculador.pantalla('2')" />
+        <input type="button" value="3" onclick="calculador.pantalla('3')" />
+        <input type="button" value="borrar" onclick="calculador.desapilar()" />
+        <input type="button" value="0" onclick="calculador.pantalla('0')" />
+        <input type="button" value="Enter" onclick="calculador.apilar()" />
         <input type="submit" value="Enviar" disabled />
       </form>
 
