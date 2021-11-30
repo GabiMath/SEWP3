@@ -13,13 +13,15 @@
       <h2>Seleccione un archivo de texto:</h2>
       <p id="soporte"></p>
       <form>
-        <input
+        <label>Oprime para ingresar un archivo <input
           type="file"
           id="archivoTexto"
           onchange="archivo.leerArchivoTexto(this.files);"
-        />
+        /></label>
+        
         <input
           type="submit"
+          value="Enviar"
           disabled
         />
       </form>
