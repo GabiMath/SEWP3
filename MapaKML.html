@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API File: Leer un archivo de texto</title>
+    <script src="MapaKML.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <link href="MapaKML.css" rel="stylesheet">
+    
+  </head>
+  <body >
+    <h1>API File: Leer un archivo de texto situado en la máquina cliente</h1>
+
+    <p>Seleccione un archivo de texto:</p>
+    <p>
+      <input type="file" id="archivo" onchange="archivo.cargarArchivo(this.files);" />
+    </p>
+    <p id="map"></p>
+  </body>
+</html>
