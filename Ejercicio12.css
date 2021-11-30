@@ -15,10 +15,18 @@ h3 {
   text-align: center;
 }
 
-button {
+input[type="file"] {
   background-color: #061433;
   color: white;
   border-radius: 0.8em;
   cursor: pointer;
   padding: 0.5em 1em;
 }
+
+input[type="submit"]{
+    height: 0em;
+    background-color: #fff;
+    color: black;
+    border: none;
+}
+
