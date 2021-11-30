@@ -12,19 +12,12 @@
     <section>
       <h2>Seleccione un archivo de texto:</h2>
       <p id="soporte"></p>
-      <form>
-        <label>Oprime para ingresar un archivo <input
+        <input
           type="file"
           id="archivoTexto"
           onchange="archivo.leerArchivoTexto(this.files);"
-        /></label>
-        
-        <input
-          type="submit"
-          value="Enviar"
-          disabled
         />
-      </form>
+        
       <p id="nombreArchivo"></p>
       <p id="tamañoArchivo"></p>
       <p id="tipoArchivo"></p>
